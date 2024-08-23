@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://b8nx6y0dahtp3"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_pxj06"]
+load_path = "res://.godot/imported/four-seasons-tileset.png-5195c87d78e254036ac9da84ff1a1861.ctex"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4rqli"]
+size = Vector2(20, 6.86061)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_15dtq"]
+size = Vector2(20, 7)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7e1h5"]
+size = Vector2(16, 6.99983)
+
+[node name="AnimatableBody2D" type="AnimatableBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("CompressedTexture2D_pxj06")
+region_enabled = true
+region_rect = Rect2(0, 112.344, 48.1308, 9.17621)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-15.9961, -0.562667)
+rotation = 0.10472
+shape = SubResource("RectangleShape2D_4rqli")
+one_way_collision = true
+
+[node name="sd" type="CollisionShape2D" parent="."]
+position = Vector2(-1.74393e-16, 0.5)
+shape = SubResource("RectangleShape2D_15dtq")
+one_way_collision = true
+
+[node name="dff" type="CollisionShape2D" parent="."]
+position = Vector2(15.9965, -0.499976)
+rotation = -0.122173
+shape = SubResource("RectangleShape2D_7e1h5")
+one_way_collision = true

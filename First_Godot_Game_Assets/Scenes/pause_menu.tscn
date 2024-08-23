@@ -1,0 +1,153 @@
+[gd_scene load_steps=9 format=3 uid="uid://bh7nxqciqjlaf"]
+
+[ext_resource type="Texture2D" uid="uid://d2s23livfau06" path="res://First_Godot_Game_Assets/Models/Start_Screen.png" id="1_pek6m"]
+[ext_resource type="Script" path="res://First_Godot_Game_Assets/Scenes/pause_menu.gd" id="1_wgk7g"]
+[ext_resource type="FontFile" uid="uid://g7rrg6gjefqc" path="res://First_Godot_Game_Assets/fonts/PixelOperator8.ttf" id="2_vsvcu"]
+[ext_resource type="FontFile" uid="uid://c7vjbig5b3uva" path="res://First_Godot_Game_Assets/fonts/PixelOperator8-Bold.ttf" id="3_wpnpe"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q5q2d"]
+texture = ExtResource("1_pek6m")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bf082"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tbqwj"]
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_size = 7
+
+[sub_resource type="GDScript" id="GDScript_53w52"]
+script/source = "extends Button
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+
+
+func _on_pressed():
+	pass # Replace with function body.
+"
+
+[node name="Pause_Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wgk7g")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -160.0
+offset_top = 4.0
+offset_right = 162.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_q5q2d")
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 0
+offset_left = -181.0
+offset_right = 2340.0
+offset_bottom = 1360.0
+
+[node name="=-" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(2.08165e-12, 2.08165e-12)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -351.0
+offset_top = -101.0
+offset_right = 342.0
+offset_bottom = 496.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 55
+
+[node name="Start_Button" type="Button" parent="=-"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_vsvcu")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_bf082")
+theme_override_styles/hover = SubResource("StyleBoxFlat_tbqwj")
+text = "Restart
+"
+script = SubResource("GDScript_53w52")
+
+[node name="Options_Button" type="Button" parent="=-"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_vsvcu")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_bf082")
+theme_override_styles/hover = SubResource("StyleBoxFlat_tbqwj")
+text = "Options
+"
+
+[node name="Exit_Button" type="Button" parent="=-"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.92
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_vsvcu")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_bf082")
+theme_override_styles/hover = SubResource("StyleBoxFlat_tbqwj")
+text = "Exit
+"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -344.0
+offset_top = 368.0
+offset_right = 1508.0
+offset_bottom = 482.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 14
+theme_override_fonts/font = ExtResource("3_wpnpe")
+theme_override_font_sizes/font_size = 113
+text = "Paused"
+
+[connection signal="pressed" from="=-/Start_Button" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="=-/Start_Button" to="=-/Start_Button" method="_on_pressed"]
+[connection signal="pressed" from="=-/Options_Button" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="=-/Exit_Button" to="." method="_on_exit_button_pressed"]
