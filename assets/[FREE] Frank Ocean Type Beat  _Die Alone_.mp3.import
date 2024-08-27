@@ -7,7 +7,7 @@ path="res://.godot/imported/[FREE] Frank Ocean Type Beat  _Die Alone_.mp3-a0a36e
 
 [deps]
 
-source_file="res://First_Game_In_Godot/First_Godot_Game_Assets/[FREE] Frank Ocean Type Beat  _Die Alone_.mp3"
+source_file="res://assets/music/[FREE] Frank Ocean Type Beat  _Die Alone_.mp3"
 dest_files=["res://.godot/imported/[FREE] Frank Ocean Type Beat  _Die Alone_.mp3-a0a36e2c73bb529474abaee76dda639e.mp3str"]
 
 [params]

@@ -1,5 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://dvo4iqdimatyk"]
+[gd_scene load_steps=9 format=3 uid="uid://dvo4iqdimatyk"]
 
+[ext_resource type="Script" path="res://scenes/main_menu.gd" id="1_8jv3k"]
 [ext_resource type="FontFile" uid="uid://g7rrg6gjefqc" path="res://assets/fonts/PixelOperator8.ttf" id="1_57wn6"]
 [ext_resource type="Texture2D" uid="uid://d2s23livfau06" path="res://assets/Models/Start_Screen.png" id="2_2kuio"]
 [ext_resource type="FontFile" uid="uid://c7vjbig5b3uva" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="3_y10bm"]
@@ -43,6 +44,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_8jv3k")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
