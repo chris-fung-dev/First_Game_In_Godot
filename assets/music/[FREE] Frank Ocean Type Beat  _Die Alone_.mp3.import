@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cxekhiabq8lvj"
+path="res://.godot/imported/[FREE] Frank Ocean Type Beat  _Die Alone_.mp3-35ad2109a915e6b2823a4eea73b92361.mp3str"
+
+[deps]
+
+source_file="res://assets/music/[FREE] Frank Ocean Type Beat  _Die Alone_.mp3"
+dest_files=["res://.godot/imported/[FREE] Frank Ocean Type Beat  _Die Alone_.mp3-35ad2109a915e6b2823a4eea73b92361.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
